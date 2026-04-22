@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Ladybug Lodge</title>
+  <meta name="description" content="Book Ladybug Lodge directly and skip the service fees. Tell us your dates and we'll get back to you right away.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a class="nav-logo" href="index.html">
+      <img src="images/logo.png" alt="Ladybug Lodge">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">The Story</a></li>
+      <li><a href="book.html">Book</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="container">
+      <h1 class="page-hero-title">Book Direct &amp; Save</h1>
+      <p class="page-hero-sub">Skip the platform fees — reserve your dates straight with us.</p>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- INQUIRY FORM -->
+        <div>
+          <div class="section-header" style="text-align:left; margin-bottom:1.75rem;">
+            <h2 class="section-title">Send an Inquiry</h2>
+            <div class="section-divider" style="margin-left:0;"></div>
+          </div>
+
+          <!-- ✏️  SIGN UP FREE AT formspree.io → New Form → copy your Form ID and replace YOUR_FORM_ID below -->
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="firstName">First Name *</label>
+                <input class="form-input" type="text" id="firstName" name="firstName" required placeholder="Jane">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Last Name *</label>
+                <input class="form-input" type="text" id="lastName" name="lastName" required placeholder="Smith">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="checkin">Check-in Date *</label>
+                <input class="form-input" type="date" id="checkin" name="checkin" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="checkout">Check-out Date *</label>
+                <input class="form-input" type="date" id="checkout" name="checkout" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Your Email *</label>
+              <input class="form-input" type="email" id="email" name="email" required placeholder="jane@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone / Text (optional)</label>
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="+1 555 000 0000">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Anything else? (optional)</label>
+              <textarea class="form-input form-textarea" id="message" name="message" rows="4" placeholder="Group size, questions, special requests..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">Send Inquiry</button>
+          </form>
+
+        </div>
+
+        <!-- WHY DIRECT + CONTACT INFO -->
+        <div>
+          <div class="section-header" style="text-align:left; margin-bottom:1.75rem;">
+            <h2 class="section-title">Why Book Direct?</h2>
+            <div class="section-divider" style="margin-left:0;"></div>
+          </div>
+
+          <ul class="why-direct-list">
+            <li>No AirBnB or VRBO service fees — more money stays in your pocket</li>
+            <li>Talk directly to the owner — fast replies, no platform middleman</li>
+            <li>Flexible arrangements and personal service</li>
+            <li>Secure payment via Stripe — simple and trusted</li>
+          </ul>
+
+          <div class="contact-card">
+            <p class="contact-card-label">Prefer to text?</p>
+            <a href="sms:+16048186174" class="contact-card-number">+1 (604) 818-6174</a>
+            <p class="contact-card-note">Text your dates and we'll reply fast.</p>
+          </div>
+
+          <div class="contact-card" style="margin-top:1rem;">
+            <p class="contact-card-label">Email</p>
+            <a href="mailto:beefourhansen@gmail.com" class="contact-card-number contact-card-email">beefourhansen@gmail.com</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-logo">Ladybug Lodge</p>
+        <p class="footer-address">Buffalo Narrows, Saskatchewan</p>
+      </div>
+      <p class="footer-copy">&copy; 2025 Ladybug Lodge. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/ladybuglodge/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.innerHTML = '<div class="form-success"><p>Thanks! We’ll be in touch soon to confirm your dates.</p><p style="margin-top:0.75rem; font-size:0.9rem; color:var(--gray);">In a hurry? Text us at +1 (604) 818-6174.</p></div>';
+        } else {
+          btn.textContent = 'Send Inquiry';
+          btn.disabled = false;
+          alert('Something went wrong — please text us directly at +1 (604) 818-6174.');
+        }
+      } catch {
+        btn.textContent = 'Send Inquiry';
+        btn.disabled = false;
+        alert('Something went wrong — please text us directly at +1 (604) 818-6174.');
+      }
+    });
+  </script>
+
+</body>
+</html>

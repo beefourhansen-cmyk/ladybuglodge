@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Your Stay — Ladybug Lodge</title>
-  <meta name="description" content="Check availability and book your stay at Ladybug Lodge. Reserve directly or through AirBnB and VRBO.">
+  <meta name="description" content="Book Ladybug Lodge directly and save on service fees, or reserve through AirBnB and VRBO.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,6 +21,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="story.html">The Story</a></li>
       <li><a href="book.html" class="active">Book</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
   </nav>
@@ -33,19 +34,36 @@
     </div>
   </header>
 
-  <!-- BOOKING SECTION -->
+  <!-- BOOK DIRECT BANNER -->
+  <section class="section section-charcoal">
+    <div class="container book-direct-banner">
+      <div>
+        <h2 class="section-title">Book Direct &amp; Save the Fees</h2>
+        <div class="section-divider" style="margin-left:0;"></div>
+        <p style="margin-top:1.25rem; color:rgba(242,222,177,0.8); font-size:1rem; line-height:1.8; max-width:520px;">
+          Skip AirBnB and VRBO service fees and book straight with us. Send your dates, we'll confirm availability, and get you set up with a secure Stripe payment link. Simple, personal, and cheaper for everyone.
+        </p>
+      </div>
+      <div class="book-direct-cta">
+        <a href="contact.html" class="btn btn-primary" style="font-size:0.85rem; padding:1rem 2.5rem;">Contact to Book Directly</a>
+        <p style="margin-top:1rem; font-size:0.82rem; color:rgba(242,222,177,0.55);">Or text: <a href="sms:+16048186174" style="color:var(--sand); text-decoration:underline;">+1 (604) 818-6174</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVAILABILITY + OTA -->
   <section class="section section-white">
     <div class="container">
       <div class="book-grid">
 
-        <!-- Direct booking / calendar -->
+        <!-- Calendar -->
         <div>
           <div class="section-header" style="text-align:left; margin-bottom: 1.75rem;">
             <h2 class="section-title">Availability</h2>
             <div class="section-divider" style="margin-left:0;"></div>
           </div>
 
-          <!-- ✏️  PASTE YOUR CALENDAR EMBED (Lodgify, Hostaway, etc.) HERE -->
+          <!-- ✏️  PASTE YOUR CALENDAR EMBED (Beds24, Lodgify, etc.) HERE -->
           <div class="placeholder-block">
             <p><strong>Availability calendar coming soon.</strong></p>
             <p>Drop your calendar embed code here and it'll display automatically.</p>
@@ -53,23 +71,17 @@
           <!-- ✏️  END CALENDAR PLACEHOLDER -->
         </div>
 
-        <!-- Direct payment / Stripe -->
+        <!-- Also available on OTAs -->
         <div>
           <div class="section-header" style="text-align:left; margin-bottom: 1.75rem;">
-            <h2 class="section-title">Reserve &amp; Pay</h2>
+            <h2 class="section-title">Also Available On</h2>
             <div class="section-divider" style="margin-left:0;"></div>
           </div>
 
-          <!-- ✏️  PASTE YOUR STRIPE PAYMENT LINK BUTTON HERE -->
-          <div class="placeholder-block" style="margin-bottom: 2rem;">
-            <p><strong>Direct payment coming soon.</strong></p>
-            <p>Replace this block with your Stripe payment link or embed.</p>
-          </div>
-          <!-- ✏️  END STRIPE PLACEHOLDER -->
+          <p style="font-size:0.9rem; color:var(--gray); margin-bottom:1.5rem; line-height:1.7;">
+            Prefer booking through a platform you already know? We're listed on both AirBnB and VRBO. Note that platform service fees apply.
+          </p>
 
-          <div class="section-header" style="text-align:left; margin-bottom: 1rem;">
-            <h3 style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--gray); font-weight:400;">Also available on</h3>
-          </div>
           <div style="display:flex; flex-direction:column; gap:0.85rem;">
             <a
               href="https://www.airbnb.ca/rooms/your-listing-id"
@@ -86,8 +98,9 @@
               &#127968;&nbsp; Book on VRBO
             </a>
           </div>
-          <p style="margin-top:1.25rem; font-size:0.82rem; color:var(--gray);">
-            Questions? Reach us on <a href="https://www.instagram.com/ladybuglodge/" target="_blank" rel="noopener" style="color:var(--brown); text-decoration:underline;">Instagram</a>.
+
+          <p style="margin-top:1.5rem; padding:1rem 1.25rem; background:var(--sand-light); border-radius:6px; font-size:0.82rem; color:var(--gray); border-left:3px solid var(--sand-dark); line-height:1.6;">
+            <strong style="color:var(--brown);">Save money:</strong> Booking directly with us avoids platform service fees of up to 14%. <a href="contact.html" style="color:var(--brown); text-decoration:underline;">Contact us directly</a> to get the better deal.
           </p>
         </div>
 

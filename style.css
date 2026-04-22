@@ -385,6 +385,140 @@ a { color: inherit; }
 .share-x        { background: #000;    color: #fff; }
 .share-whatsapp { background: #25d366; color: #fff; }
 
+/* ─── BOOK DIRECT BANNER ─────────────────────────────────── */
+.book-direct-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  padding: 4rem 1.5rem;
+}
+
+.book-direct-cta {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ─── CONTACT PAGE ───────────────────────────────────────── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: 0.4rem;
+}
+
+.form-input {
+  border: 1.5px solid rgba(130,117,87,0.35);
+  border-radius: 6px;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--charcoal);
+  background: var(--white);
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-input:focus { border-color: var(--brown); }
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-success {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--sand-light);
+  border-radius: 8px;
+  border: 2px solid var(--sand-dark);
+}
+
+.form-success p {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--brown-dark);
+}
+
+.why-direct-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.why-direct-list li {
+  padding: 0.65rem 0 0.65rem 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--gray);
+  border-bottom: 1px solid rgba(130,117,87,0.12);
+  line-height: 1.6;
+}
+
+.why-direct-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--brown);
+  font-weight: 700;
+}
+
+.contact-card {
+  background: var(--sand-light);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--sand-dark);
+}
+
+.contact-card-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: 0.35rem;
+}
+
+.contact-card-number {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
+  color: var(--brown-dark);
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+}
+
+.contact-card-number:hover { color: var(--brown); }
+
+.contact-card-email { font-size: 1rem; }
+
+.contact-card-note {
+  font-size: 0.82rem;
+  color: var(--gray);
+}
+
 /* ─── FOOTER ─────────────────────────────────────────────── */
 .footer {
   background: var(--charcoal);
@@ -449,9 +583,11 @@ a { color: inherit; }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .features  { grid-template-columns: repeat(2, 1fr); }
-  .reviews   { grid-template-columns: repeat(2, 1fr); }
-  .book-grid { grid-template-columns: 1fr; }
+  .features       { grid-template-columns: repeat(2, 1fr); }
+  .reviews        { grid-template-columns: repeat(2, 1fr); }
+  .book-grid      { grid-template-columns: 1fr; }
+  .contact-grid   { grid-template-columns: 1fr; gap: 3rem; }
+  .book-direct-banner { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 640px) {
@@ -478,8 +614,9 @@ a { color: inherit; }
   .hero-title { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.6); padding-right: 0; padding-bottom: 0.5rem; }
   .hero-ctas { justify-content: center; }
 
-  .features { grid-template-columns: 1fr; }
-  .reviews   { grid-template-columns: 1fr; }
+  .features   { grid-template-columns: 1fr; }
+  .reviews    { grid-template-columns: 1fr; }
+  .form-row   { grid-template-columns: 1fr; }
 
   .footer-inner { flex-direction: column; text-align: center; }
 }
