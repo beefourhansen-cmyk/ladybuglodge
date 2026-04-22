@@ -231,6 +231,14 @@ a { color: inherit; }
 
 .feature-icon { font-size: 1.75rem; margin-bottom: 0.65rem; }
 
+.feature-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
 .feature-title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.05rem;
