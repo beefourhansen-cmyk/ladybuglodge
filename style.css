@@ -84,7 +84,7 @@ a { color: inherit; }
   position: relative;
   display: flex; align-items: flex-end;
   background-color: var(--brown-dark);
-  background-image: url('https://img1.wsimg.com/isteam/ip/71d4dd4f-10aa-4cda-a1b0-7ec9fb78bd86/blob-0017.png');
+  background-image: url('images/hero.jpg');
   background-size: cover;
   background-position: center 30%;
   background-attachment: fixed;
