@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Your Stay — Ladybug Lodge</title>
-  <meta name="description" content="Book Ladybug Lodge directly and save on service fees. Fill in your dates and we'll confirm availability fast.">
+  <meta name="description" content="Book Ladybug Lodge directly and save on service fees, or reserve through AirBnB and VRBO.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -30,113 +30,87 @@
   <header class="page-hero">
     <div class="container">
       <h1 class="page-hero-title">Book Your Stay</h1>
-      <p class="page-hero-sub">Fill in your dates below and we&#8217;ll get back to you fast.</p>
+      <p class="page-hero-sub">Summers fill up fast — grab your week.</p>
     </div>
   </header>
 
-  <!-- BOOK DIRECT FORM -->
+  <!-- BOOK DIRECT BANNER -->
+  <section class="section section-charcoal">
+    <div class="container book-direct-banner">
+      <div>
+        <h2 class="section-title">Book Direct &amp; Save the Fees</h2>
+        <div class="section-divider" style="margin-left:0;"></div>
+        <p style="margin-top:1.25rem; color:rgba(242,222,177,0.8); font-size:1rem; line-height:1.8; max-width:520px;">
+          Skip AirBnB and VRBO service fees and book straight with us. Send your dates, we'll confirm availability, and get you set up with a secure Stripe payment link. Simple, personal, and cheaper for everyone.
+        </p>
+      </div>
+      <div class="book-direct-cta">
+        <a href="contact.html" class="btn btn-primary" style="font-size:0.85rem; padding:1rem 2.5rem;">Contact to Book Directly</a>
+        <p style="margin-top:1rem; font-size:0.82rem; color:rgba(242,222,177,0.55);">Or text: <a href="sms:+16048186174" style="color:var(--sand); text-decoration:underline;">+1 (604) 818-6174</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVAILABILITY + OTA -->
   <section class="section section-white">
     <div class="container">
-      <div class="book-direct-grid">
+      <div class="book-grid">
 
-        <!-- FORM -->
+        <!-- Calendar -->
         <div>
-          <div class="section-header" style="text-align:left; margin-bottom:1.75rem;">
-            <h2 class="section-title">Request Your Dates</h2>
+          <div class="section-header" style="text-align:left; margin-bottom: 1.75rem;">
+            <h2 class="section-title">Availability</h2>
             <div class="section-divider" style="margin-left:0;"></div>
           </div>
 
-          <div data-fs-success class="form-success">
-            <p>Thanks! We&#8217;ll be in touch soon to confirm your dates.</p>
-            <p style="margin-top:0.75rem; font-size:0.9rem; color:var(--gray);">In a hurry? Text us at +1 (604) 818-6174.</p>
+          <!-- Availability calendar — Google Calendar (AirBnB iCal synced) -->
+          <div class="calendar-embed">
+            <iframe src="https://calendar.google.com/calendar/embed?src=qti9n3mppg7oarmir1g7i66l3gdvuj39%40import.calendar.google.com&ctz=America%2FVancouver" style="border:0;" width="800" height="600" frameborder="0" scrolling="no"></iframe>
           </div>
-          <div data-fs-error class="form-error-global"></div>
-
-          <form id="bookForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="firstName">First Name *</label>
-                <input class="form-input" type="text" id="firstName" name="firstName" required placeholder="Jane" data-fs-field>
-                <span class="form-field-error" data-fs-error="firstName"></span>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="lastName">Last Name *</label>
-                <input class="form-input" type="text" id="lastName" name="lastName" required placeholder="Smith" data-fs-field>
-                <span class="form-field-error" data-fs-error="lastName"></span>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="checkin">Check-in Date *</label>
-                <input class="form-input" type="date" id="checkin" name="checkin" required data-fs-field>
-                <span class="form-field-error" data-fs-error="checkin"></span>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="checkout">Check-out Date *</label>
-                <input class="form-input" type="date" id="checkout" name="checkout" required data-fs-field>
-                <span class="form-field-error" data-fs-error="checkout"></span>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="email">Your Email *</label>
-              <input class="form-input" type="email" id="email" name="email" required placeholder="jane@example.com" data-fs-field>
-              <span class="form-field-error" data-fs-error="email"></span>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="phone">Phone / Text (optional)</label>
-              <input class="form-input" type="tel" id="phone" name="phone" placeholder="+1 555 000 0000" data-fs-field>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="message">Anything else? (optional)</label>
-              <textarea class="form-input form-textarea" id="message" name="message" rows="3" placeholder="Group size, questions, special requests..." data-fs-field></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem; font-size:0.85rem;" data-fs-submit-btn>Send Booking Request</button>
-          </form>
         </div>
 
-        <!-- WHY DIRECT -->
-        <div class="book-why-col">
-          <div class="section-header" style="text-align:left; margin-bottom:1.75rem;">
-            <h2 class="section-title">Why Book Direct?</h2>
+        <!-- Also available on OTAs -->
+        <div>
+          <div class="section-header" style="text-align:left; margin-bottom: 1.75rem;">
+            <h2 class="section-title">Also Available On</h2>
             <div class="section-divider" style="margin-left:0;"></div>
           </div>
 
-          <ul class="why-direct-list">
-            <li>No Airbnb or VRBO service fees &mdash; more money stays in your pocket</li>
-            <li>Talk directly to the owner &mdash; fast replies, no platform middleman</li>
-            <li>Flexible arrangements and personal service</li>
-            <li>Secure payment via Stripe &mdash; simple and trusted</li>
-          </ul>
+          <p style="font-size:0.9rem; color:var(--gray); margin-bottom:1.5rem; line-height:1.7;">
+            Prefer booking through a platform you already know? We're listed on both AirBnB and VRBO. Note that platform service fees apply.
+          </p>
 
-          <div class="contact-card" style="margin-top:2rem;">
-            <p class="contact-card-label">Prefer to text?</p>
-            <a href="sms:+16048186174" class="contact-card-number">+1 (604) 818-6174</a>
-            <p class="contact-card-note">Text your dates and we&#8217;ll reply fast.</p>
+          <div style="display:flex; flex-direction:column; gap:0.85rem;">
+            <a
+              href="contact.html"
+              class="btn btn-primary"
+              style="justify-content:flex-start; gap:0.6rem;">
+              &#127968;&nbsp; Book Direct
+            </a>
+            <a
+              href="https://www.airbnb.ca/rooms/52022290"
+              target="_blank" rel="noopener"
+              class="btn btn-dark"
+              style="justify-content:flex-start; gap:0.6rem;">
+              &#127968;&nbsp; Book on AirBnB
+            </a>
+            <a
+              href="https://www.vrbo.com/en-ca/cottage-rental/p9786042"
+              target="_blank" rel="noopener"
+              class="btn btn-outline-dark"
+              style="justify-content:flex-start; gap:0.6rem;">
+              &#127968;&nbsp; Book on VRBO
+            </a>
           </div>
 
-          <div class="contact-card" style="margin-top:1rem;">
-            <p class="contact-card-label">Email</p>
-            <a href="mailto:beefourhansen@gmail.com" class="contact-card-number contact-card-email">beefourhansen@gmail.com</a>
-          </div>
-
-          <div class="book-how-it-works">
-            <p class="book-how-title">How it works</p>
-            <ol class="book-how-steps">
-              <li><strong>Fill in the form</strong> with your dates</li>
-              <li><strong>We confirm</strong> availability within hours</li>
-              <li><strong>Pay securely</strong> via a Stripe link we send you</li>
-            </ol>
-          </div>
+          <p style="margin-top:1.5rem; padding:1rem 1.25rem; background:var(--sand-light); border-radius:6px; font-size:0.82rem; color:var(--gray); border-left:3px solid var(--sand-dark); line-height:1.6;">
+            <strong style="color:var(--brown);">Save money:</strong> Booking directly with us avoids platform service fees of up to 14%. <a href="contact.html" style="color:var(--brown); text-decoration:underline;">Contact us directly</a> to get the better deal.
+          </p>
         </div>
 
       </div>
     </div>
   </section>
-
-  <!-- OTA FOOTNOTE -->
-  <div class="ota-footnote">
-    <p>Rather use a booking platform? We&#8217;re also listed on <a href="https://www.airbnb.ca/rooms/52022290" target="_blank" rel="noopener">Airbnb</a> and <a href="https://www.vrbo.com/en-ca/cottage-rental/p9786042" target="_blank" rel="noopener">VRBO</a> &mdash; though platform service fees apply.</p>
-  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -156,11 +130,8 @@
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-
-    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-    formspree('initForm', { formElement: '#bookForm', formId: 'mqewywjb' });
   </script>
-  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"c9116ef474774069baf6bbcaa5b1a001","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
