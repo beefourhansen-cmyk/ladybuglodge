@@ -347,6 +347,44 @@ a { color: inherit; }
 .story-body p { margin-bottom: 1.5rem; }
 .story-body h2 { font-family: 'Playfair Display', Georgia, serif; margin-bottom: 1rem; color: var(--brown-dark); }
 
+.story-share {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(130,117,87,0.2);
+}
+
+.story-share-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: 1rem;
+}
+
+.story-share-btns {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.share-btn:hover { opacity: 0.85; }
+.share-facebook { background: #1877f2; color: #fff; }
+.share-x        { background: #000;    color: #fff; }
+.share-whatsapp { background: #25d366; color: #fff; }
+
 /* ─── FOOTER ─────────────────────────────────────────────── */
 .footer {
   background: var(--charcoal);
