@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Stay — Ladybug Lodge</title>
+  <meta name="description" content="Check availability and book your stay at Ladybug Lodge. Reserve directly or through AirBnB and VRBO.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a class="nav-logo" href="index.html">
+      <img src="https://img1.wsimg.com/isteam/ip/71d4dd4f-10aa-4cda-a1b0-7ec9fb78bd86/Ladybug%20Lodge%20Logo%20-%20Transparent%20Background.png/:/rs=w:200,h:200,cg:true,m/cr=w:200,h:200" alt="Ladybug Lodge">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">The Story</a></li>
+      <li><a href="book.html" class="active">Book</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="container">
+      <h1 class="page-hero-title">Book Your Stay</h1>
+      <p class="page-hero-sub">Summers fill up fast — grab your week.</p>
+    </div>
+  </header>
+
+  <!-- BOOKING SECTION -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="book-grid">
+
+        <!-- Direct booking / calendar -->
+        <div>
+          <div class="section-header" style="text-align:left; margin-bottom: 1.75rem;">
+            <h2 class="section-title">Availability</h2>
+            <div class="section-divider" style="margin-left:0;"></div>
+          </div>
+
+          <!-- ✏️  PASTE YOUR CALENDAR EMBED (Lodgify, Hostaway, etc.) HERE -->
+          <div class="placeholder-block">
+            <p><strong>Availability calendar coming soon.</strong></p>
+            <p>Drop your calendar embed code here and it'll display automatically.</p>
+          </div>
+          <!-- ✏️  END CALENDAR PLACEHOLDER -->
+        </div>
+
+        <!-- Direct payment / Stripe -->
+        <div>
+          <div class="section-header" style="text-align:left; margin-bottom: 1.75rem;">
+            <h2 class="section-title">Reserve &amp; Pay</h2>
+            <div class="section-divider" style="margin-left:0;"></div>
+          </div>
+
+          <!-- ✏️  PASTE YOUR STRIPE PAYMENT LINK BUTTON HERE -->
+          <div class="placeholder-block" style="margin-bottom: 2rem;">
+            <p><strong>Direct payment coming soon.</strong></p>
+            <p>Replace this block with your Stripe payment link or embed.</p>
+          </div>
+          <!-- ✏️  END STRIPE PLACEHOLDER -->
+
+          <div class="section-header" style="text-align:left; margin-bottom: 1rem;">
+            <h3 style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--gray); font-weight:400;">Also available on</h3>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:0.85rem;">
+            <a
+              href="https://www.airbnb.ca/rooms/your-listing-id"
+              target="_blank" rel="noopener"
+              class="btn btn-dark"
+              style="justify-content:flex-start; gap:0.6rem;">
+              &#127968;&nbsp; Book on AirBnB
+            </a>
+            <a
+              href="https://www.vrbo.com/your-listing-id"
+              target="_blank" rel="noopener"
+              class="btn btn-outline-dark"
+              style="justify-content:flex-start; gap:0.6rem;">
+              &#127968;&nbsp; Book on VRBO
+            </a>
+          </div>
+          <p style="margin-top:1.25rem; font-size:0.82rem; color:var(--gray);">
+            Questions? Reach us on <a href="https://www.instagram.com/ladybuglodge/" target="_blank" rel="noopener" style="color:var(--brown); text-decoration:underline;">Instagram</a>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-logo">Ladybug Lodge</p>
+        <p class="footer-address">Ontario, Canada</p>
+      </div>
+      <p class="footer-copy">&copy; 2025 Ladybug Lodge. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/ladybuglodge/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+
+</body>
+</html>
