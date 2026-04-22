@@ -763,39 +763,40 @@ a { color: inherit; }
 .amenity-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .amenity-group {
   background: var(--sand-light);
   border-radius: 8px;
-  padding: 1.1rem 1.15rem 1rem;
-  border-top: 2px solid var(--brown);
+  padding: 1.25rem 1.25rem 1rem;
+  border-top: 3px solid var(--brown);
 }
 
 .amenity-group-title {
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--brown-dark);
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.8rem;
 }
 
 .amenity-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
 }
 
 .amenity-tags span {
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   color: var(--gray);
-  background: rgba(130,117,87,0.1);
-  border-radius: 3px;
-  padding: 0.2rem 0.5rem;
-  line-height: 1.4;
+  padding: 0.24rem 0.1rem;
+  border-bottom: 1px solid rgba(130,117,87,0.1);
+  line-height: 1.45;
 }
+
+.amenity-tags span:nth-last-child(-n+2) { border-bottom: none; }
 
 /* ─── RATING SUMMARY ─────────────────────────────────────── */
 .rating-summary {
@@ -861,7 +862,6 @@ a { color: inherit; }
 .rating-bar {
   display: block;
   height: 100%;
-  width: var(--pct);
   background: var(--brown);
   border-radius: 2px;
 }
